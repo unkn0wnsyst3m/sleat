@@ -57,7 +57,7 @@ def main():
     if outfile == None:
        outfile = "logons.csv"
 
-    print "Output file: %s" % outfile
+    print("Output file: %s" % outfile)
 
     # initialize vars
     depth = 0
@@ -74,7 +74,7 @@ def main():
     context = iter(context)
 
     # get the root element
-    event, root = context.next()
+    event, root = next(context)
 
     for event, elem in context:
         # namespace handling
